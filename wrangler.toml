@@ -1,0 +1,19 @@
+name = "26613proxycontroller"
+main = "src/index.js"
+compatibility_date = "2026-06-03"
+
+# 告诉 Cloudflare 这是一个普通的 Worker
+workers_dev = true
+
+# 声明代码中用到的环境变量（用户在部署页面或稍后可以修改）
+[vars]
+WEB_USER = "admin"
+WEB_PASS = "78jb78jb78jb"
+PROXY_USER = "guowei"
+PROXY_PASS = "78jb78jb78jb"
+
+# 声明 D1 数据库绑定
+[[d1_databases]]
+binding = "DB"
+database_name = "proxy_db"
+database_id = "59b248ab-7bea-453c-876e-f01689b573b9" # 留空，一键部署向导或后续配置会引导用户绑定他们自己的 D1 数据库
